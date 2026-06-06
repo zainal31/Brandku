@@ -6,45 +6,49 @@
 		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 		<title>Brandku - Landing Page</title>
 	</head>
-	<body class="min-h-screen flex flex-col">
-		<header class="flex items-center justify-between py-4 px-4">
-			<h1 class="text-blue-700 font-bold text-clifford">Brandku</h1>
-			<nav class="flex items-center gap-8">
-				<a href="">Beranda</a>
-				<a href="/fitur.html">Fitur</a>
-				<a href="">Harga</a>
+	<body class="min-h-screen flex flex-col bg-gray-50 text-gray-800 font-sans">
+		<header class="flex items-center justify-between py-5 px-8 bg-white shadow-sm sticky top-0 z-50">
+			<h1 class="text-blue-700 font-extrabold text-2xl tracking-tight transition duration-300 hover:text-blue-900 cursor-pointer">Brandku</h1>
+			<nav class="flex items-center gap-8 font-medium text-gray-600">
+				<a href="" class="hover:text-blue-700 transition-colors duration-200 hover:underline decoration-2 underline-offset-4">Beranda</a>
+				<a href="/fitur.html" class="hover:text-blue-700 transition-colors duration-200 hover:underline decoration-2 underline-offset-4">Fitur</a>
+				<a href="" class="hover:text-blue-700 transition-colors duration-200 hover:underline decoration-2 underline-offset-4">Harga</a>
 			</nav>
 		</header>
 		<main class="flex-grow">
-			<section class="bg-indigo-50 text-center py-16 px-4">
-				<h1 class="text-4xl font-bold mb-2">Solusi Terbaik Untuk Bisnismu</h1>
-				<p class="mb-6 text-gray-600">Platform all-in-one untuk manajemen, pemasaran, dan pertumbuhan bisnis kecil.</p>
-				<button id="cta-btn" class="bg-blue-700 text-white px-3 py-1 rounded-full">Mulai Gratis</button>
-				<p id="cta-feedback" class="mt-4 text-blue-600 font-medium hidden"></p>
+			<section class="bg-indigo-50 text-center py-24 px-4 border-b border-indigo-100">
+				<h1 class="text-4xl md:text-5xl font-extrabold mb-4 text-gray-900 tracking-tight">Solusi Terbaik Untuk Bisnismu</h1>
+				<p class="mb-8 text-lg text-gray-600 max-w-2xl mx-auto">Platform all-in-one untuk manajemen, pemasaran, dan pertumbuhan bisnis kecil.</p>
+				<button
+					id="cta-btn"
+					class="bg-blue-700 text-white font-semibold px-8 py-3 rounded-full shadow-md hover:bg-blue-800 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-md transition-all duration-200 ease-in-out">
+					Mulai Gratis
+				</button>
+				<p id="cta-feedback" class="mt-4 text-blue-600 font-medium hidden transition-opacity duration-300"></p>
 			</section>
-			<section class="max-w-5xl mx-auto px-16 py-6">
-				<h2 class="text-2xl font-bold text-center mb-5">Mengapa Brandku?</h2>
-				<div class="flex justify-center gap-10">
-					<article class="flex-1">
-						<h2 class="text-3xl mb-2">⚡</h2>
-						<h3 class="font-bold mb-2">Mudah Digunakan</h3>
-						<p class="text-gray-600 max-w-xs mx-auto">Tidak Perlu Keahlian Teknis. Setup dalam 5 menit.</p>
+			<section class="max-w-6xl mx-auto px-6 py-20">
+				<h2 class="text-3xl font-bold text-center mb-12 text-gray-900">Mengapa Brandku?</h2>
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+					<article class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group cursor-pointer">
+						<div class="text-5xl mb-4 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">⚡</div>
+						<h3 class="text-xl font-bold mb-3 text-gray-800">Mudah Digunakan</h3>
+						<p class="text-gray-600">Tidak perlu keahlian teknis. Setup dan siap berjalan hanya dalam 5 menit.</p>
 					</article>
-					<article class="flex-1">
-						<h2 class="text-3xl mb-2">🤖</h2>
-						<h3 class="font-bold mb-2">Serba Otomatis</h3>
-						<p class="text-gray-600 max-w-xs mx-auto">Otomatiskan tugas berulang dan fokus pada hal yg penting</p>
+					<article class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group cursor-pointer">
+						<div class="text-5xl mb-4 group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-300">🤖</div>
+						<h3 class="text-xl font-bold mb-3 text-gray-800">Serba Otomatis</h3>
+						<p class="text-gray-600">Otomatiskan tugas berulang dan fokus pada hal yang benar-benar penting.</p>
 					</article>
-					<article class="flex-1">
-						<h2 class="text-3xl mb-2">📊</h2>
-						<h3 class="font-bold mb-2">Laporan Real-Time</h3>
-						<p class="text-gray-600 max-w-xs mx-auto">Pantau performa bisnismu kapan saja dan di mana saja</p>
+					<article class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group cursor-pointer">
+						<div class="text-5xl mb-4 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">📊</div>
+						<h3 class="text-xl font-bold mb-3 text-gray-800">Laporan Real-Time</h3>
+						<p class="text-gray-600">Pantau performa dan metrik bisnismu kapan saja dan di mana saja.</p>
 					</article>
 				</div>
 			</section>
 		</main>
-		<footer class="bg-gray-800 text-white text-center p-6 text-sm">
-			<p>&copy; 2025 Brandku All rights reserved</p>
+		<footer class="bg-gray-900 text-gray-300 text-center p-8 text-sm">
+			<p>&copy; 2026 Brandku. All rights reserved.</p>
 		</footer>
 		<script src="index.js"></script>
 	</body>
