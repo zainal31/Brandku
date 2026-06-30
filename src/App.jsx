@@ -1,22 +1,27 @@
 import { useState } from "react";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import CardGrid from "./components/CardGrid";
 import { featureData } from "../data/features";
 import Hero from "./components/Hero";
+import { BrowserRouter, Routes, Route } from "react-router";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Pricing from "./pages/Pricing";
 
 const App = () => {
 	const [features] = useState(featureData);
 	return (
 		<>
-			<Header />
-			<main>
-				<Hero />
-				<CardGrid features={features} />
-			</main>
-
-			<footer className="bg-gray-800 text-white text-center p-6 text-sm">
-				<p>&copy; 2025 Brandku All rights reserved</p>
-			</footer>
+			<BrowserRouter>
+				<Header />
+				<Routes>
+					<Route path="/" element={<Home features={featureData} />} />
+					<Route path="/tentang" element={<About />} />
+					<Route path="/harga" element={<Pricing />} />
+				</Routes>
+				<Footer />
+			</BrowserRouter>
 		</>
 	);
 };

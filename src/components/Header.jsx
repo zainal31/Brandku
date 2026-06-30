@@ -1,16 +1,16 @@
 import { useState } from "react";
+// import { link } from "react-router";
 
 const Header = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
-	console.log;
 
 	return (
 		<header className="flex items-center justify-between py-4 px-4">
 			<h1 className="text-blue-700 font-bold text-clifford">Brandku</h1>
 			<nav className="hidden md:flex items-center gap-8">
-				<a href="">Beranda</a>
-				<a href="/fitur.html">Fitur</a>
-				<a href="">Harga</a>
+				<a href="/">Beranda</a>
+				<a href="/tentang">Tentang</a>
+				<a href="/harga">Harga</a>
 			</nav>
 
 			<button className="md:hidden text-2xl text-gray-700 focus:outline-none" onClick={() => setIsMenuOpen((prev) => !prev)}>
@@ -19,13 +19,13 @@ const Header = () => {
 
 			{isMenuOpen && (
 				<nav className="md:hidden absolute top-16 left-0 w-full bg-white shadow-md py-4 px-6">
-					<a href="" className="block py-2" onClick={() => setIsMenuOpen(false)}>
+					<a href="/" className="block py-2" onClick={() => setIsMenuOpen(false)}>
 						Beranda
 					</a>
-					<a href="/fitur.html" className="block py-2" onClick={() => setIsMenuOpen(false)}>
-						Fitur
+					<a href="/tentang" className="block py-2" onClick={() => setIsMenuOpen(false)}>
+						Tentang
 					</a>
-					<a href="" className="block py-2" onClick={() => setIsMenuOpen(false)}>
+					<a href="/harga" className="block py-2" onClick={() => setIsMenuOpen(false)}>
 						Harga
 					</a>
 				</nav>
